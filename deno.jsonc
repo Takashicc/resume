@@ -2,6 +2,8 @@
   "tasks": {
     "textlint": "deno run -A npm:textlint README.md",
     "cspell": "deno run -A npm:cspell README.md",
-    "markdownlint": "deno run -A npm:markdownlint-cli2 README.md"
+    "markdownlint": "deno run -A npm:markdownlint-cli2 README.md",
+    "md-to-pdf": "deno run -A npm:md-to-pdf README.md --config-file ./pdf-configs/config.js",
+    "puppeteer": "deno run -A npm:puppeteer"
   }
 }
