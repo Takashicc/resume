@@ -28,6 +28,9 @@ jobs:
           fi
           echo "create_issue=true" >> "$GITHUB_OUTPUT"
 
+      - if: ${{ steps.check_issue_exists.outputs.create_issue == 'true' }}
+        uses: actions/checkout@v4
+
       - name: Create issue
         if: ${{ steps.check_issue_exists.outputs.create_issue == 'true' }}
         run: |
