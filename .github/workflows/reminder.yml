@@ -31,4 +31,4 @@ jobs:
       - name: Create issue
         if: ${{ steps.check_issue_exists.outputs.create_issue == 'true' }}
         run: |
-          gh issue create --template "reminder"
+          gh issue create --template "reminder" --title "feat: Update resume"
