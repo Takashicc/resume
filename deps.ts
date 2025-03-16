@@ -1,0 +1,13 @@
+import "npm:cspell@^8.0.0";
+import "npm:markdownlint-cli2@^0.17.0";
+import "npm:textlint-filter-rule-allowlist@^4.0.0";
+import "npm:textlint-filter-rule-comments@^1.2.2";
+import "npm:textlint-rule-aws-service-name@^1.5.0";
+import "npm:textlint-rule-ja-hiragana-daimeishi@^1.0.0";
+import "npm:textlint-rule-ja-hiragana-fukushi@^1.3.0";
+import "npm:textlint-rule-ja-hiragana-hojodoushi@^1.1.0";
+import "npm:textlint-rule-ja-keishikimeishi@^1.0.5";
+import "npm:textlint-rule-ja-no-abusage@^3.0.0";
+import "npm:textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet@^1.0.1";
+import "npm:textlint-rule-preset-ja-spacing@^2.3.0";
+import "npm:textlint-rule-preset-ja-technical-writing@^12.0.0";

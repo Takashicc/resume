@@ -1,0 +1,19 @@
+{
+  "config": {
+    "line-length": false,
+    "no-duplicate-heading": {
+      "siblings_only": true
+    },
+    "no-inline-html": false,
+    "commands-show-output": false,
+    "single-h1": false,
+    "no-alt-text": false,
+    "no-hard-tabs": false,
+    "ul-indent": {
+      "indent": 4
+    },
+    "link-fragments": false,
+    "no-space-in-emphasis": false
+  },
+  "ignores": [".github", ".idea", "node_modules"]
+}

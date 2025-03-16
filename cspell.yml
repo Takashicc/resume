@@ -1,0 +1,11 @@
+$schema: https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json
+version: "0.2"
+allowCompoundWords: true
+dictionaryDefinitions:
+  - name: cspell-ignore-words
+    path: "./cspell-ignore-words.txt"
+    addWords: true
+dictionaries:
+  - cspell-ignore-words
+files:
+  - README.md

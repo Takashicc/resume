@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "textlint": "deno run -A npm:textlint README.md",
+    "cspell": "deno run -A npm:cspell README.md",
+    "markdownlint": "deno run -A npm:markdownlint-cli2 README.md"
+  }
+}

@@ -1,0 +1,31 @@
+version: "3"
+
+vars:
+  files: "README.md"
+
+tasks:
+  default:
+    cmd: task -l --sort none
+
+  cache:
+    desc: "Install dependencies"
+    cmd: deno cache deps.ts
+
+  lint:
+    desc: "Run lint"
+    cmds:
+      - task textlint || true
+      - task cspell || true
+      - task markdownlint || true
+
+  textlint:
+    desc: "Run textlint"
+    cmd: deno task textlint {{.CLI_ARGS}}
+
+  cspell:
+    desc: "Run cspell"
+    cmd: deno task cspell {{.CLI_ARGS}}
+
+  markdownlint:
+    desc: "Run markdownlint"
+    cmd: deno task markdownlint {{.CLI_ARGS}}
