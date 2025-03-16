@@ -34,4 +34,4 @@ jobs:
       - name: Create issue
         if: ${{ steps.check_issue_exists.outputs.create_issue == 'true' }}
         run: |
-          gh issue create -a '@me' -t 'feat: Update resume' -F ./.github/ISSUE_TEMPLATE/reminder.md -l enhancement
+          gh issue create -a 'Takashicc' -t 'feat: Update resume' -F ./.github/ISSUE_TEMPLATE/reminder.md -l enhancement
