@@ -1,6 +1,7 @@
 ---
-title: 職務経歴書を更新してください
-assignees: takashicc
+name: reminder
+title: "feat: Update resume"
+assignees: Takashicc
 labels: enhancement
 ---
 
