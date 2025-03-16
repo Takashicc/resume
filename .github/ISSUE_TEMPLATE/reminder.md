@@ -1,5 +1,6 @@
 ---
 name: reminder
+abount: reminder
 title: "feat: Update resume"
 assignees: Takashicc
 labels: enhancement
