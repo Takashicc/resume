@@ -11,3 +11,5 @@ import "npm:textlint-rule-ja-no-abusage@^3.0.0";
 import "npm:textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet@^1.0.1";
 import "npm:textlint-rule-preset-ja-spacing@^2.3.0";
 import "npm:textlint-rule-preset-ja-technical-writing@^12.0.0";
+import "npm:md-to-pdf@^5.2.4";
+import "npm:puppeteer-core@^24.4.0";

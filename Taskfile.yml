@@ -9,7 +9,9 @@ tasks:
 
   cache:
     desc: "Install dependencies"
-    cmd: deno cache deps.ts
+    cmds:
+      - deno cache deps.ts
+      - deno task puppeteer browsers install chrome
 
   lint:
     desc: "Run lint"
@@ -29,3 +31,7 @@ tasks:
   markdownlint:
     desc: "Run markdownlint"
     cmd: deno task markdownlint {{.CLI_ARGS}}
+
+  generate-pdf:
+    desc: "Generate PDF"
+    cmd: deno task md-to-pdf {{.CLI_ARGS}}
