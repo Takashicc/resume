@@ -3,7 +3,7 @@
 ## 各種アカウント
 
 <p style="display: flex; gap: 8px">
-    <a href="https://github.com/Takashicc"><img src="https://img.shields.io/badge/takashicc-%23121011.svg?&style=flat-square&logo=Github&logoColor=white" /></a>
+    <a href="https://github.com/Takashicc"><img src="https://img.shields.io/badge/Takashicc-%23121011.svg?&style=flat-square&logo=Github&logoColor=white" /></a>
     <a href="https://zenn.dev/takashicc" target="_blank"><img alt="Zenn" src="https://img.shields.io/badge/Takashicc-3EA8FF.svg?&style=flat-square&logo=Zenn&logoColor=white" /></a>
 </p>
 
@@ -37,7 +37,7 @@
 
 #### 2023/02 - 2024/03 : xambrプラットフォーム開発
 
-VRプラットフォーム[xambr](xambr.app)の開発に従事。
+VRプラットフォーム[xambr](https://xambr.app)の開発に従事。
 
 ##### 使用技術
 
