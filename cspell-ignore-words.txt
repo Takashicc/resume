@@ -2,3 +2,4 @@ zenn
 ambr
 xambr
 terasoluna
+distroless
