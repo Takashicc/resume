@@ -7,6 +7,13 @@
     <a href="https://zenn.dev/takashicc" target="_blank"><img alt="Zenn" src="https://img.shields.io/badge/Takashicc-3EA8FF.svg?&style=flat-square&logo=Zenn&logoColor=white" /></a>
 </p>
 
+## 技術スキル
+
+|分野|技術・ツール|
+|:-:|:-:|
+|言語|Go, Java, Rust, Python, TypeScript, JavaScript, Cue, PL/SQL, VBA for Excel|
+|クラウド/DevOps|AWS(Cognito, ECS-Fargate/EC2, CDK, CloudFormation, Lambda, S3, RDS, ElastiCache), PlanetScale(MySQL), Momento Cache, GitHub Actions, testcontainers, Renovate, Datadog|
+
 ## 職務経歴
 
 ### 2023/02 - : 株式会社ambr
@@ -29,7 +36,7 @@
 - APIの設計、開発、テスト、運用。
     - Sign in with AppleとCognitoの連携および実装。
         - <https://zenn.dev/ambr_inc/articles/d77b038c51d4f4>
-    - 複数人が同じ空間で集中できる「スペース」機能の実装。
+    - 同じ空間で作業できる「スペース」機能の実装。
     - 管理画面からプッシュ通知を予約できる機能の実装。
 - CI/CDの構築および改善。
     - testcontainersを導入し、競合を考えずにテストできる機構を用意した。
@@ -62,7 +69,7 @@ VRプラットフォーム[xambr](https://xambr.app)の開発に従事。
 - CI/CDの構築および改善。
     - もともとE2Eテスト(Tavern)しかやっておらず、LintやFormat、Unit testを実行するようにした。
     - キャッシュも活用するようにし、CIの実行時間を短くした。
-    - 本番環境へのデプロイはGitHub Actionsを通して行うが、承認を通してからデプロイできるようにslack-approval actionを改良し、導入。
+    - 本番環境へのデプロイはGitHub Actionsを通して行うが、作成・変更対象のリソースを確認して、承認を通してからデプロイできるように[slack-approval action](https://github.com/Takashicc/slack-approval)を改良し、導入。
 - 開発環境の整備
     - [Taskfile](https://taskfile.dev)を導入し、チーム内で頻繁に実行されるコマンドを一元化した。
     - エラーコードがコードとNotionのどちらでも管理されていたため、片方にはあるけどもう片方にはないということが度々あったため、コードから自動的にエラーコードのドキュメントを作成できるようにした。
@@ -72,6 +79,9 @@ VRプラットフォーム[xambr](https://xambr.app)の開発に従事。
 - マスターデータを管理するCLIツールのスクラッチ開発。
     - 改善案などを積極的に取り込んで実装。
     - ドキュメントも用意。
+- ChatGPT-4が出た際に、Slack×ChatGPT-4ボットを開発。
+    - Python+Lambdaで実装。
+    - <https://github.com/ambr-tech/chat-gpt-slack>
 
 ### 2019/06 - 2022/06 : 株式会社ブレーンナレッジシステムズ
 
@@ -133,6 +143,12 @@ PL/SQLで作成された購買システムをJavaへマイグレーション。
     - GitHub Actionでワークフロー内にSlack承認を組み込むカスタムアクション。
     - フォークする形で機能追加や言語のリプレイスなどを行っている。
 
+### チーム開発
+
+- [ondo](https://github.com/team-ondo)
+    - 高齢者の熱中症死亡が増加する社会課題を解決するため、家庭内の温湿度異常をモニタリングできるIoT＋Webアプリ。
+    - テックリードとして技術選定やコードレビューなどに携わった。
+
 ### アウトプット
 
 - Zenn
@@ -143,6 +159,9 @@ PL/SQLで作成された購買システムをJavaへマイグレーション。
 
 ## 保有資格
 
+<!-- textlint-disable ja-technical-writing/max-kanji-continuous-len -->
+- 実用英語技能検定2級
+<!-- textlint-enable -->
 - Java SE 7/8 Bronze
 - Python3エンジニア認定基礎試験
 - AWS Certified Cloud Practitioner
