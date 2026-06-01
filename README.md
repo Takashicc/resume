@@ -12,7 +12,7 @@
 |分野|技術・ツール|
 |:-:|:-:|
 |言語|Go, Java, Rust, Python, TypeScript, JavaScript, Cue, PL/SQL, VBA for Excel|
-|クラウド/DevOps|AWS(Cognito, ECS-Fargate/EC2, CDK, CloudFormation, Lambda, S3, RDS, ElastiCache), PlanetScale(MySQL), Momento Cache, GitHub Actions, testcontainers, Renovate, Datadog|
+|クラウド/DevOps|AWS(Cognito, ECS-Fargate/EC2, CDK, CloudFormation, Lambda, S3, RDS, ElastiCache), PlanetScale(MySQL), Cloudflare(Workers, KV, D1, Durable Objects), Momento Cache, GitHub Actions, testcontainers, Renovate, Datadog|
 
 ## 職務経歴
 
@@ -26,9 +26,12 @@
 
 - Golang
 - C#
+- TypeScript
 - MySQL
+- SQLite
 - GitHub Actions
 - AWS CDK
+- Cloudflare Workers
 - Docker
 
 ##### 担当内容
@@ -38,12 +41,14 @@
         - <https://zenn.dev/ambr_inc/articles/d77b038c51d4f4>
     - 同じ空間で作業できる「スペース」機能の実装。
     - 管理画面からプッシュ通知を予約できる機能の実装。
+    - Cloudflare Workers × Hono による問い合わせ API の設計・実装。
 - CI/CDの構築および改善。
     - testcontainersを導入し、競合を考えずにテストできる機構を用意した。
     - renovateの導入により、ライブラリのバージョンを自動管理できるようにした。
     - ボトルネックを調査し、キャッシュや並列化などにより13分かかっていたCIワークフローが通常でも8分、キャッシュ有効時は5分と大幅な短縮を図ることに成功した。
     - distrolessの導入によりコンテナのイメージサイズを小さくした。
     - GitHub ActionsからAWS認証する方式をアクセスキーからOIDC認証に変更。
+    - モバイル向けビルドパイプラインを Azure Pipelines から GitHub Actions（self-hosted runner）へ移行し、ワークフローを再設計。
 
 #### 2023/02 - 2024/03 : xambrプラットフォーム開発
 
