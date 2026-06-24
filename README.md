@@ -7,12 +7,23 @@
     <a href="https://zenn.dev/takashicc" target="_blank"><img alt="Zenn" src="https://img.shields.io/badge/Takashicc-3EA8FF.svg?&style=flat-square&logo=Zenn&logoColor=white" /></a>
 </p>
 
+## 職務要約
+
+バックエンドエンジニアとして、Go / TypeScript / Javaを中心に、API設計・開発・テスト・運用、CI/CD改善、クラウドインフラの構築・運用改善に従事してきました。
+
+現職では、アバター×作業集中アプリ「gogh」およびVRプラットフォーム「xambr」のバックエンド開発を担当しています。認証連携、権限設計、Cloudflare Workersを用いたAPI実装、GitHub ActionsによるCI/CD改善、AWS環境の運用改善、ゲームサーバーのインフラ再構成など、プロダクト開発と開発基盤改善の両面に取り組んできました。
+
+特に、CI実行時間の短縮、Testcontainers導入、Renovate導入、GitHub ActionsのOIDC認証移行、Slack承認付きデプロイフローの整備など、チームが継続的に開発しやすい状態をつくることを意識して取り組んでいます。
+
 ## 技術スキル
 
-|分野|技術・ツール|
-|:-:|:-:|
-|言語|Go, Java, Rust, Python, TypeScript, JavaScript, Cue, PL/SQL, VBA for Excel|
-|クラウド/DevOps|AWS(Cognito, ECS-Fargate/EC2, CDK, CloudFormation, Lambda, S3, RDS, ElastiCache), PlanetScale(MySQL), Cloudflare(Workers, KV, D1, Durable Objects), Momento Cache, GitHub Actions, testcontainers, Renovate, Datadog|
+|分野|技術|
+|:-|:-|
+|主な開発言語|Go, TypeScript, Java|
+|実務経験あり|Python, Rust, C#, JavaScript, CUE, PL/SQL, VBA|
+|バックエンド/API|REST API, Hono, Amazon Cognito, MySQL, SQLite|
+|クラウド/インフラ|Amazon ECS, Amazon EC2, AWS Fargate, AWS Lambda, Amazon S3, Amazon RDS, Amazon ElastiCache, AWS Systems Manager Session Manager, Cloudflare Workers, KV, D1, Durable Objects|
+|DevOps/運用改善|GitHub Actions, AWS CDK, AWS CloudFormation, AWS Copilot, Docker, Testcontainers, Renovate, Datadog|
 
 ## 職務経歴
 
@@ -20,11 +31,11 @@
 
 #### 2024/04 - : gogh開発
 
-アバター×作業集中アプリ、[gogh](https://gogh.gg)のバックエンド開発に従事。
+アバター×作業集中アプリ「[gogh](https://gogh.gg)」のバックエンド開発に従事。
 
 ##### 使用技術
 
-- Golang
+- Go
 - C#
 - TypeScript
 - MySQL
@@ -32,135 +43,123 @@
 - GitHub Actions
 - AWS CDK
 - Cloudflare Workers
+- Hono
 - Docker
 
-##### 担当内容
+##### 担当領域・実装
 
-- APIの設計、開発、テスト、運用。
-    - Sign in with AppleとCognitoの連携および実装。
-        - <https://zenn.dev/ambr_inc/articles/d77b038c51d4f4>
-    - 同じ空間で作業できる「スペース」機能の実装。
-    - 管理画面からプッシュ通知を予約できる機能の実装。
-    - Cloudflare Workers × Hono による問い合わせ API の設計・実装。
-- CI/CDの構築および改善。
-    - testcontainersを導入し、競合を考えずにテストできる機構を用意した。
-    - renovateの導入により、ライブラリのバージョンを自動管理できるようにした。
-    - ボトルネックを調査し、キャッシュや並列化などにより13分かかっていたCIワークフローが通常でも8分、キャッシュ有効時は5分と大幅な短縮を図ることに成功した。
-    - distrolessの導入によりコンテナのイメージサイズを小さくした。
-    - GitHub ActionsからAWS認証する方式をアクセスキーからOIDC認証に変更。
-    - モバイル向けビルドパイプラインを Azure Pipelines から GitHub Actions（self-hosted runner）へ移行し、ワークフローを再設計。
+- Goを用いたAPIの設計・開発・テスト・運用を担当
+- Sign in with AppleとAmazon Cognitoの連携を設計・実装
+    - <https://zenn.dev/ambr_inc/articles/d77b038c51d4f4>
+- 同じ空間で作業できる「スペース」機能のバックエンド実装を担当
+- 管理画面からプッシュ通知を予約できる機能を実装
+- Cloudflare Workers / Honoを用いた問い合わせAPIを設計・実装
+- Testcontainersを導入し、テストごとに独立したDB環境を利用できる仕組みを整備
+    - ローカルおよびCI環境におけるテスト間の競合を防止
+    - 安定した自動テスト実行基盤を構築
+- Renovateを導入し、依存ライブラリ更新の自動化を実現
+- GitHub Actionsのボトルネックを調査し、キャッシュ・並列化・ワークフロー構成を改善
+    - CI実行時間を約13分から通常時約8分、キャッシュ有効時約5分まで短縮
+    - 開発サイクルの高速化に貢献
+- Distrolessを導入し、コンテナイメージサイズを削減
+- GitHub ActionsからAWSへ認証する方式をアクセスキーからOIDC認証へ移行
+    - 長期アクセスキーの管理を不要にし、セキュリティと運用性を改善
+- モバイル向けビルドパイプラインをAzure PipelinesからGitHub Actions self-hosted runnerへ移行
+    - 既存ワークフローを見直し、ビルドパイプラインを再設計
 
 #### 2023/02 - 2024/03 : xambrプラットフォーム開発
 
-VRプラットフォーム[xambr](https://xambr.app)の開発に従事。
+VRプラットフォーム「xambr」のバックエンド開発および開発基盤改善。
 
 ##### 使用技術
 
-- Golang
+- Go
 - Python
 - MySQL
 - GitHub Actions
 - CloudFormation
-- Copilot
+- AWS Copilot
 - AWS CDK
 - Docker
 
-##### 業務内容
+##### 担当領域・実装
 
-- APIの設計、開発、テスト、運用。
-    - 運営者権限の設計および実装。
-        - CUE言語を導入し、ユーザー・ポリシー・アクション間のリレーショナルなデータ構造を実現。
-    - RDS、Redisへ接続する際に踏み台EC2へSSHキーを使っていたが、SessionManagerに乗り換えることで運用コストを減らした。
-- CI/CDの構築および改善。
-    - もともとE2Eテスト(Tavern)しかやっておらず、LintやFormat、Unit testを実行するようにした。
-    - キャッシュも活用するようにし、CIの実行時間を短くした。
-    - 本番環境へのデプロイはGitHub Actionsを通して行うが、作成・変更対象のリソースを確認して、承認を通してからデプロイできるように[slack-approval action](https://github.com/Takashicc/slack-approval)を改良し、導入。
-- 開発環境の整備
-    - [Taskfile](https://taskfile.dev)を導入し、チーム内で頻繁に実行されるコマンドを一元化した。
-    - エラーコードがコードとNotionのどちらでも管理されていたため、片方にはあるけどもう片方にはないということが度々あったため、コードから自動的にエラーコードのドキュメントを作成できるようにした。
-    - オンボーディング資料やドキュメントの更新。
-- ゲームサーバーのインフラの再構成。
-    - これまではECS on Fargateだったが、ネットワーク帯域が問題となっていたため、ECS on EC2で再構築した。
-- マスターデータを管理するCLIツールのスクラッチ開発。
-    - 改善案などを積極的に取り込んで実装。
-    - ドキュメントも用意。
-- ChatGPT-4が出た際に、Slack×ChatGPT-4ボットを開発。
-    - Python+Lambdaで実装。
+- Goを用いたAPIの設計・開発・テスト・運用を担当
+- 運営者権限の設計・実装を担当
+- CUEを導入し、ユーザー・ポリシー・アクション間の関係性をコード上で管理できる仕組みを構築
+- RDS / Redis接続時の踏み台EC2運用を見直し、AWS Systems Manager Session Managerへ移行
+    - SSHキー管理を不要にし、運用負荷を削減
+- CI/CDの構築・改善を担当
+    - 既存のE2Eテストに加え、Lint / Format / Unit TestをCIで実行するよう整備
+    - キャッシュを活用し、CI実行時間を短縮
+- GitHub Actionsによる本番デプロイにSlack承認フローを導入
+    - デプロイ時のリソース変更内容を確認し、承認後に反映できる仕組みを構築
+    - [slack-approval action](https://github.com/Takashicc/slack-approval)を改良し、実務に導入
+- 開発環境を整備
+    - Taskfileを導入し、チーム内で頻繁に利用するコマンドを一元化
+    - コードとNotionで二重管理されていたエラーコードについて、コードからドキュメントを自動生成できる仕組みを構築
+    - オンボーディング資料や開発ドキュメントを更新
+- ゲームサーバーのインフラを再構成
+    - ECS on Fargateで発生していたネットワーク帯域課題に対し、ECS on EC2構成へ再設計
+- マスターデータ管理用CLIツールをスクラッチ開発
+    - 改善要望を取り込みながら機能追加
+    - 利用方法や運用手順のドキュメントも整備
+- Slack向けGPT-4連携ボットを開発
+    - Python / AWS Lambdaで実装
     - <https://github.com/ambr-tech/chat-gpt-slack>
 
 ### 2019/06 - 2022/06 : 株式会社ブレーンナレッジシステムズ
 
-#### 2021/10 - 2022/06 : 販売管理システムのリースアップによるシステム更改
+Java / Oracleを用いた業務システム開発、保守、マイグレーションに従事しました。販売管理システムのカスタマイズ開発、社内システムの保守、人事評価システムの改修、TERASOLUNAのバージョン移行、PL/SQLからJavaへのマイグレーションなどを担当しました。
 
-BeAd販売管理システムパッケージのカスタマイズ開発、製造、単体・結合試験を担当。
+#### 主な担当業務
 
-##### 使用技術
+- Java / Oracleを用いた業務システムの製造、単体試験、結合試験を担当
+- TERASOLUNA / Macchinetta Frameworkを用いたWebアプリケーションを開発
+- PL/SQLで実装された既存処理を読み解き、Javaへ移行
+- intra-martを基盤とした社内システムのバグ調査、修正、試験を担当
+- JUnit / DBUnitを用いた単体試験を実施
+- Excel VBAを用いた人事評価データ集計マクロを改修
+- 古い運用マニュアルをもとに作業内容を整理し、手順書や自動化ツールを作成
 
-- Java
-- Oracle
-- BeAd
-
-#### 2020/03 - 2021/09 : 社内システムの保守や人事評価システムの改修
-
-intra-martを基盤とした社内システムのバグ調査や修正を担当。  
-バグチケットを元に素早く正確な調査結果をまとめ、修正から試験までを実施。  
-社内システムの期替わりにおいては、社員データなどの入れ替えを担当。マニュアルが古い状況の中、独自にマニュアルを作成し、自動化ツールを作成。  
-また、人事評価システムの改修においてはExcelで管理された人事評価を集計するExcelマクロの仕様追加や、コードを深く読むことで見つかった既存バグを修正。
-
-##### 使用技術
-
-- Java
-- Oracle
-- Excel VBA
-- intra-mart
-
-#### 2019/10 - 2020/02 : 募集人システムのTERASOLUNA2系から5系への移行作業
-
-TERASOLUNAを基盤としたシステムのアップグレード作業。  
-製造、単体試験を担当し、共通部品の実装やバッチ処理の部品を実装。  
-単体試験ではJUnitとDBUnitを用いた試験を実施。
-
-##### 使用技術
-
-- Java
-- Oracle
-- TERASOLUNA
-
-#### 2019/06 - 2019/09 : 購買システムのPL/SQLからJavaへのマイグレーション
-
-PL/SQLで作成された購買システムをJavaへマイグレーション。  
-製造、単体・結合試験を担当し、Macchinetta Frameworkを基盤に開発。  
-開発はPL/SQLで実装されたソースを読み解き、Javaに落とし込んでいくことで機能を実装。
-
-##### 使用技術
+#### 使用技術
 
 - Java
 - Oracle
 - PL/SQL
 - JSP
+- Excel VBA
+- TERASOLUNA
 - Macchinetta Framework
+- intra-mart
+- JUnit
+- DBUnit
 
 ## 業務外活動
 
 ### OSS
 
-- [slack-approval](https://github.com/Takashicc/slack-approval)
-    - GitHub Actionでワークフロー内にSlack承認を組み込むカスタムアクション。
-    - フォークする形で機能追加や言語のリプレイスなどを行っている。
+#### [slack-approval](https://github.com/Takashicc/slack-approval)
+
+GitHub Actionsのワークフロー内にSlack承認フローを組み込むカスタムアクションです。
+既存OSSをフォークし、機能追加、保守、言語リプレイスなどを行っています。実務でも本番デプロイ時の承認フローとして活用しました。
 
 ### チーム開発
 
-- [ondo](https://github.com/team-ondo)
-    - 高齢者の熱中症死亡が増加する社会課題を解決するため、家庭内の温湿度異常をモニタリングできるIoT＋Webアプリ。
-    - テックリードとして技術選定やコードレビューなどに携わった。
+#### [ondo](https://github.com/team-ondo)
 
-### アウトプット
+高齢者の熱中症死亡が増加する社会課題を解決するため、家庭内の温湿度異常をモニタリングできるIoT + Webアプリケーションを開発しました。
+テックリードとして、技術選定、設計方針の策定、コードレビューなどを担当しました。
 
-- Zenn
-    - <https://zenn.dev/takashicc>
+## アウトプット
 
-- GitHub
-    - <https://github.com/Takashicc>
+### Zenn
+
+<https://zenn.dev/takashicc>
+
+### GitHub
+
+<https://github.com/Takashicc>
 
 ## 保有資格
 
