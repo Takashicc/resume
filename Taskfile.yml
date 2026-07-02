@@ -7,12 +7,6 @@ tasks:
   default:
     cmd: task -l --sort none
 
-  cache:
-    desc: "Install dependencies"
-    cmds:
-      - deno cache deps.ts
-      - deno task puppeteer browsers install chrome
-
   lint:
     desc: "Run lint"
     cmds:
@@ -22,16 +16,16 @@ tasks:
 
   textlint:
     desc: "Run textlint"
-    cmd: deno task textlint {{.CLI_ARGS}}
+    cmd: bunx textlint README.md {{.CLI_ARGS}}
 
   cspell:
     desc: "Run cspell"
-    cmd: deno task cspell {{.CLI_ARGS}}
+    cmd: bunx cspell README.md {{.CLI_ARGS}}
 
   markdownlint:
     desc: "Run markdownlint"
-    cmd: deno task markdownlint {{.CLI_ARGS}}
+    cmd: bunx markdownlint-cli2 README.md {{.CLI_ARGS}}
 
   generate-pdf:
     desc: "Generate PDF"
-    cmd: deno task md-to-pdf {{.CLI_ARGS}}
+    cmd: bunx md-to-pdf README.md --config-file ./pdf-configs/config.js {{.CLI_ARGS}}
