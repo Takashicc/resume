@@ -23,15 +23,15 @@ tasks:
 
   textlint:
     desc: "Run textlint"
-    cmd: bunx --bun textlint README.md {{.CLI_ARGS}}
+    cmd: bunx textlint README.md {{.CLI_ARGS}}
 
   cspell:
     desc: "Run cspell"
-    cmd: bunx --bun cspell README.md {{.CLI_ARGS}}
+    cmd: bunx cspell README.md {{.CLI_ARGS}}
 
   markdownlint:
     desc: "Run markdownlint"
-    cmd: bunx --bun markdownlint-cli2 README.md {{.CLI_ARGS}}
+    cmd: bunx markdownlint-cli2 README.md {{.CLI_ARGS}}
 
   generate-pdf:
     desc: "Generate PDF"
