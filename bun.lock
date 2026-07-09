@@ -4,23 +4,23 @@
   "workspaces": {
     "": {
       "devDependencies": {
-        "cspell": "latest",
-        "markdownlint-cli2": "latest",
-        "md-to-pdf": "latest",
-        "puppeteer": "latest",
-        "puppeteer-core": "latest",
-        "textlint": "latest",
-        "textlint-filter-rule-allowlist": "latest",
-        "textlint-filter-rule-comments": "latest",
-        "textlint-rule-aws-service-name": "latest",
-        "textlint-rule-ja-hiragana-daimeishi": "latest",
-        "textlint-rule-ja-hiragana-fukushi": "latest",
-        "textlint-rule-ja-hiragana-hojodoushi": "latest",
-        "textlint-rule-ja-keishikimeishi": "latest",
-        "textlint-rule-ja-no-abusage": "latest",
-        "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "latest",
-        "textlint-rule-preset-ja-spacing": "latest",
-        "textlint-rule-preset-ja-technical-writing": "latest",
+        "cspell": "10.0.1",
+        "markdownlint-cli2": "0.23.0",
+        "md-to-pdf": "5.2.5",
+        "puppeteer": "25.3.0",
+        "puppeteer-core": "25.3.0",
+        "textlint": "15.7.1",
+        "textlint-filter-rule-allowlist": "4.0.0",
+        "textlint-filter-rule-comments": "1.3.0",
+        "textlint-rule-aws-service-name": "1.14.0",
+        "textlint-rule-ja-hiragana-daimeishi": "1.0.0",
+        "textlint-rule-ja-hiragana-fukushi": "1.3.0",
+        "textlint-rule-ja-hiragana-hojodoushi": "1.1.0",
+        "textlint-rule-ja-keishikimeishi": "1.0.5",
+        "textlint-rule-ja-no-abusage": "3.0.0",
+        "textlint-rule-no-mixed-zenkaku-and-hankaku-alphabet": "1.0.1",
+        "textlint-rule-preset-ja-spacing": "3.0.2",
+        "textlint-rule-preset-ja-technical-writing": "12.0.2",
       },
     },
   },
@@ -1129,7 +1129,7 @@
 
     "longest-streak": ["longest-streak@2.0.4", "", {}, "sha512-vM6rUVCVUJJt33bnmHiZEvr7wPT78ztX7rojL+LW51bHtLh6HTjx84LA5W4+oa6aKEJA7jJu5LR6vQRBpA5DVg=="],
 
-    "lru-cache": ["lru-cache@11.5.1", "", {}, "sha512-RPimw/7aMdv2oqRrxKwvZXcPfwBrn/JZ2xYcY9Hus/6LaS3VOAKVWKWgNLCFSiOm1ESXinjsDlidVU7JlnCN2A=="],
+    "lru-cache": ["lru-cache@7.18.3", "", {}, "sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA=="],
 
     "lru_map": ["lru_map@0.4.1", "", {}, "sha512-I+lBvqMMFfqaV8CJCISjI3wbjmwVu/VyOoU7+qtu9d7ioW5klMgsTTiUOUp+DJvfTTzKXoPbyC6YfgkNcyPSOg=="],
 
@@ -2011,13 +2011,13 @@
 
     "morpheme-match-textlint/morpheme-match-all": ["morpheme-match-all@2.0.5", "", { "dependencies": { "morpheme-match": "^2.0.4" } }, "sha512-a6B6Nh4AhjMoEzVz8NOT5M9f3XwFVPM395gqnFNUXG/KTqQFTb9qM5JJFHJe+SvWfRVXTZSejyXNt+h+jmHUuQ=="],
 
+    "path-scurry/lru-cache": ["lru-cache@11.5.1", "", {}, "sha512-RPimw/7aMdv2oqRrxKwvZXcPfwBrn/JZ2xYcY9Hus/6LaS3VOAKVWKWgNLCFSiOm1ESXinjsDlidVU7JlnCN2A=="],
+
     "pkg-dir/find-up": ["find-up@3.0.0", "", { "dependencies": { "locate-path": "^3.0.0" } }, "sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg=="],
 
     "prh/diff": ["diff@4.0.4", "", {}, "sha512-X07nttJQkwkfKfvTPG/KSnE2OMdcUCao6+eXF3wmnIQRn2aPAHH3VxDbDOdegkd6JbPsXqShpvEOHfAT+nCNwQ=="],
 
     "prh/js-yaml": ["js-yaml@3.15.0", "", { "dependencies": { "argparse": "^1.0.7", "esprima": "^4.0.0" }, "bin": { "js-yaml": "bin/js-yaml.js" } }, "sha512-ttBQIIQPDeLjpPOohtUdXuXUVoA2uIB6fEH9HyJ7234s5mBJ5wTx20njxplLZQgLaOfpmPQA7X2t5AX6tIPbog=="],
-
-    "proxy-agent/lru-cache": ["lru-cache@7.18.3", "", {}, "sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA=="],
 
     "qified/hookified": ["hookified@2.2.0", "", {}, "sha512-p/LgFzRN5FeoD3DLS6bkUapeye6E4SI6yJs6KetENd18S+FBthqYq2amJUWpt5z0EQwwHemidjY5OqJGEKm5uA=="],
 

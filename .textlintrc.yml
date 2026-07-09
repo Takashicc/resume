@@ -8,7 +8,8 @@ rules:
     no-doubled-joshi: false
     sentence-length:
       max: 1000
-  preset-ja-spacing: true
+  preset-ja-spacing:
+    ja-no-space-around-slash: false
   aws-service-name: true
   ja-hiragana-daimeishi: true
   ja-hiragana-fukushi: true
