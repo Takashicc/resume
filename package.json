@@ -2,7 +2,7 @@
   "private": true,
   "type": "module",
   "devDependencies": {
-    "cspell": "10.2.2",
+    "cspell": "10.3.0",
     "markdownlint-cli2": "0.23.2",
     "md-to-pdf": "5.2.5",
     "puppeteer": "25.10.0",
