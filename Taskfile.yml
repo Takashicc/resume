@@ -1,12 +1,9 @@
 version: "3"
 
-vars:
-  files: "README.md"
-
 tasks:
   default:
     cmd: task -l --sort none
 
   generate-pdf:
     desc: "Generate PDF"
-    cmd: bunx md-to-pdf README.md --config-file ./pdf-configs/config.js {{.CLI_ARGS}}
+    cmd: bun pdf-configs/generate.ts {{.CLI_ARGS}}

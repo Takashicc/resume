@@ -49,20 +49,20 @@ Go、TypeScript、C#、MySQL、SQLite、Hono、Valibot、Drizzle ORM、Vitest、
 
 - Goを用いたAPIの設計、開発、テスト、運用を担当
 - TypeScript、Cloudflare Workers、Durable Objectsを用いたマルチユーザー機能のバックエンドを設計し、実装
-    - ドメインモデルを設計し、状態管理と永続化の処理を実装
-    - Drizzle ORMを用いて、SQLiteとMySQLのスキーマ、マイグレーション、リポジトリ層を整備
-    - 並行操作やリクエストの再送を考慮し、データの整合性を維持して重複処理を防ぐ仕組みを実装
+  - ドメインモデルを設計し、状態管理と永続化の処理を実装
+  - Drizzle ORMを用いて、SQLiteとMySQLのスキーマ、マイグレーション、リポジトリ層を整備
+  - 並行操作やリクエストの再送を考慮し、データの整合性を維持して重複処理を防ぐ仕組みを実装
 - TypeScript側のAPI定義からOpenAPI定義を生成し、Goクライアントとの連携を整備
-    - 生成したOpenAPI定義の差分をCIで検知する仕組みを追加
+  - 生成したOpenAPI定義の差分をCIで検知する仕組みを追加
 - 管理画面からプッシュ通知を予約できる機能を実装
 
 ###### セキュリティと信頼性
 
 - Sign in with AppleとAmazon Cognitoの認証連携を設計し、実装
-    - JWTの署名、発行者、対象（audience）、有効期限を検証し、nonceの照合と有効期限の管理を実装
-    - [実装に関する技術記事](https://zenn.dev/ambr_inc/articles/d77b038c51d4f4)
+  - JWTの署名、発行者、対象（audience）、有効期限を検証し、nonceの照合と有効期限の管理を実装
+  - [実装に関する技術記事](https://zenn.dev/ambr_inc/articles/d77b038c51d4f4)
 - ユーザーの権限や利用状態に基づくアクセス制御を実装
-    - 操作の実行可否とデータの参照範囲を制御
+  - 操作の実行可否とデータの参照範囲を制御
 - 並行リクエストやキャッシュ障害時の挙動を考慮し、レート制限の共通処理を実装
 - 外部サービスの認証情報をAWS Secrets Managerで管理する構成へ移行
 - リクエスト処理を見直し、認証前の不要なリソース消費を抑制
@@ -71,16 +71,16 @@ Go、TypeScript、C#、MySQL、SQLite、Hono、Valibot、Drizzle ORM、Vitest、
 ###### 開発基盤の整備と運用改善
 
 - Testcontainersを導入し、テストごとに独立したDB環境を利用できる仕組みを整備
-    - ローカル環境とCI環境でテスト間の競合を防止
+  - ローカル環境とCI環境でテスト間の競合を防止
 - Vitestを用い、TypeScriptのドメイン処理、Durable Objects、MySQL連携を検証するテスト基盤を整備
 - Renovateを導入し、依存ライブラリの更新を自動化
 - GitHub Actionsのボトルネックを調査し、キャッシュの活用、処理の並列化、ワークフロー構成の見直しを実施
-    - CI実行時間を約13分から通常時約8分、キャッシュ有効時約5分まで短縮
+  - CI実行時間を約13分から通常時約8分、キャッシュ有効時約5分まで短縮
 - Distrolessを導入し、コンテナイメージサイズを削減
 - GitHub ActionsからAWSへの認証をアクセスキーからOIDCへ移行
-    - 長期アクセスキーの管理を不要にし、セキュリティと運用性を改善
+  - 長期アクセスキーの管理を不要にし、セキュリティと運用性を改善
 - モバイル向けビルドパイプラインをAzure PipelinesからGitHub Actionsのself-hosted runnerへ移行
-    - 既存ワークフローを見直し、ビルドパイプラインを再設計
+  - 既存ワークフローを見直し、ビルドパイプラインを再設計
 
 #### 2023/02 - 2024/03：xambrプラットフォーム開発
 
@@ -97,25 +97,25 @@ Go、Python、CUE、MySQL、GitHub Actions、AWS CloudFormation、AWS Copilot、
 
 - Goを用いたAPIの設計、開発、テスト、運用を担当
 - 運営者権限を設計し、実装
-    - CUEを導入し、ユーザー、ポリシー、アクションの関係をコード上で管理する仕組みを構築
+  - CUEを導入し、ユーザー、ポリシー、アクションの関係をコード上で管理する仕組みを構築
 - マスターデータ管理用CLIツールを新規開発
-    - 利用者の改善要望を取り込みながら機能を追加し、利用方法と運用手順のドキュメントも整備
+  - 利用者の改善要望を取り込みながら機能を追加し、利用方法と運用手順のドキュメントも整備
 
 ###### インフラの運用改善
 
 - Amazon RDSやRedisへの接続に用いる踏み台EC2の運用を見直し、AWS Systems Manager Session Managerへ移行
-    - SSHキー管理を不要にし、運用負荷を削減
+  - SSHキー管理を不要にし、運用負荷を削減
 - ゲームサーバーのインフラを再構成
-    - ネットワーク帯域の課題に対応するため、Amazon ECSの実行環境をAWS FargateからAmazon EC2へ移行する構成を設計
+  - ネットワーク帯域の課題に対応するため、Amazon ECSの実行環境をAWS FargateからAmazon EC2へ移行する構成を設計
 
 ###### 開発基盤とCI/CD
 
 - CI/CDの構築と改善を担当
-    - 既存のE2Eテストに加え、Lint、フォーマットチェック、単体テストをCIで実行するよう整備
-    - キャッシュを活用し、CI実行時間を短縮
+  - 既存のE2Eテストに加え、Lint、フォーマットチェック、単体テストをCIで実行するよう整備
+  - キャッシュを活用し、CI実行時間を短縮
 - GitHub Actionsによる本番デプロイにSlack承認フローを導入
-    - リソース変更内容を確認し、承認後に反映する仕組みを構築
-    - [slack-approval](https://github.com/Takashicc/slack-approval)を改良して実務に導入
+  - リソース変更内容を確認し、承認後に反映する仕組みを構築
+  - [slack-approval](https://github.com/Takashicc/slack-approval)を改良して実務に導入
 - Taskfileを導入し、チームで頻繁に利用するコマンドを一元化
 - コードとNotionで二重管理されていたエラーコードについて、コードからドキュメントを自動生成する仕組みを構築
 - オンボーディング資料や開発ドキュメントを更新
