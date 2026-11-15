@@ -1,6 +1,14 @@
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
+  run: {
+    tasks: {
+      "generate-pdf": {
+        command: "bun pdf-configs/generate.ts",
+        cache: false,
+      },
+    },
+  },
   staged: {
     "*": "vp check --fix",
   },

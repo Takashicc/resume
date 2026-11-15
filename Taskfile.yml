@@ -1,9 +1,0 @@
-version: "3"
-
-tasks:
-  default:
-    cmd: task -l --sort none
-
-  generate-pdf:
-    desc: "Generate PDF"
-    cmd: bun pdf-configs/generate.ts {{.CLI_ARGS}}

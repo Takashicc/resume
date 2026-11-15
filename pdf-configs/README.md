@@ -9,11 +9,11 @@ Chromeの場所が異なる場合は、`CHROME_PATH`に実行ファイルのパ�
 
 ```sh
 vp install
-task generate-pdf
+vpr generate-pdf
 ```
 
 本文の[README.md](/README.md)から`README.pdf`を生成します。
-保存先を変える場合は`task generate-pdf -- /tmp/resume.pdf`のように指定します。
+保存先を変える場合は`vpr generate-pdf /tmp/resume.pdf`のように指定します。
 スタイル、用紙サイズ、余白、ページ番号は[style.css](style.css)で設定します。
 バッジ画像の取得にはネットワーク接続が必要です。
 
