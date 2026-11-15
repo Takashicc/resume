@@ -7,32 +7,6 @@ tasks:
   default:
     cmd: task -l --sort none
 
-  lint:
-    desc: "Run lint"
-    cmds:
-      - task textlint || true
-      - task cspell || true
-      - task markdownlint || true
-
-  ci:
-    desc: "Run CI checks"
-    cmds:
-      - task textlint
-      - task cspell
-      - task markdownlint
-
-  textlint:
-    desc: "Run textlint"
-    cmd: bunx textlint README.md {{.CLI_ARGS}}
-
-  cspell:
-    desc: "Run cspell"
-    cmd: bunx cspell README.md {{.CLI_ARGS}}
-
-  markdownlint:
-    desc: "Run markdownlint"
-    cmd: bunx markdownlint-cli2 README.md {{.CLI_ARGS}}
-
   generate-pdf:
     desc: "Generate PDF"
     cmd: bunx md-to-pdf README.md --config-file ./pdf-configs/config.js {{.CLI_ARGS}}
