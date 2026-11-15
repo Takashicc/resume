@@ -1,7 +1,0 @@
-ambr
-distroless
-Momento
-terasoluna
-xambr
-zenn
-ondo

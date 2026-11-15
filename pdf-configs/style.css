@@ -1,8 +1,50 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@page {
+  size: A4;
+  margin: 25mm 15mm;
+
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-family: "Times", serif;
+    font-size: 9px;
+    vertical-align: bottom;
+    padding-bottom: 5mm;
+  }
+}
 
 body {
   font-size: 12px;
-  font-family: "Noto Sans Japanese", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", Meiryo, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  break-after: avoid-page;
+  break-inside: avoid-page;
+}
+
+h4,
+h5,
+h6 {
+  margin-block: 1em 0.5em;
+}
+
+.page-break {
+  break-before: page;
+}
+
+p {
+  orphans: 3;
+  widows: 3;
+}
+
+li,
+h2 + ul,
+h6 + ul {
+  break-inside: avoid-page;
 }
 
 h1:first-child {
@@ -24,10 +66,6 @@ th {
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
-}
-
-tr:hover {
-  background-color: #ddd;
 }
 
 th {
