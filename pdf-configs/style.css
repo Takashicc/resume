@@ -16,6 +16,37 @@ body {
   font-family: "Hiragino Kaku Gothic ProN", "Noto Sans CJK JP", Meiryo, sans-serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  break-after: avoid-page;
+  break-inside: avoid-page;
+}
+
+h4,
+h5,
+h6 {
+  margin-block: 1em 0.5em;
+}
+
+.page-break {
+  break-before: page;
+}
+
+p {
+  orphans: 3;
+  widows: 3;
+}
+
+li,
+h2 + ul,
+h6 + ul {
+  break-inside: avoid-page;
+}
+
 h1:first-child {
   margin-top: 0;
   padding-top: 0;

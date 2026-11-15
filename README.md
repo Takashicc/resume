@@ -30,6 +30,8 @@ CI実行時間は約13分から通常時約8分、キャッシュ有効時約5�
 - テスト：Vitest、Testcontainers、JUnit、DBUnit
 - DevOpsと運用：GitHub Actions、AWS CDK、AWS CloudFormation、AWS Copilot、Docker、Renovate、Datadog
 
+<div class="page-break"></div>
+
 ## 職務経歴
 
 ### 2023/02 - 現在：株式会社ambr
@@ -82,6 +84,8 @@ Go、TypeScript、C#、MySQL、SQLite、Hono、Valibot、Drizzle ORM、Vitest、
 - モバイル向けビルドパイプラインをAzure PipelinesからGitHub Actionsのself-hosted runnerへ移行
   - 既存ワークフローを見直し、ビルドパイプラインを再設計
 
+<div class="page-break"></div>
+
 #### 2023/02 - 2024/03：xambrプラットフォーム開発
 
 VRプラットフォーム「xambr」のバックエンド開発と開発基盤の改善を担当しました。
@@ -119,6 +123,8 @@ Go、Python、CUE、MySQL、GitHub Actions、AWS CloudFormation、AWS Copilot、
 - Taskfileを導入し、チームで頻繁に利用するコマンドを一元化
 - コードとNotionで二重管理されていたエラーコードについて、コードからドキュメントを自動生成する仕組みを構築
 - オンボーディング資料や開発ドキュメントを更新
+
+<div class="page-break"></div>
 
 ### 2019/06 - 2022/06：株式会社ブレーンナレッジシステムズ
 
